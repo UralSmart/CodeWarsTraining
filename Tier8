@@ -22,7 +22,7 @@ function findNeedle(haystack) {
   // the sum of an array
   function sum(numbers) {
     let count = 0
-    numbers.forEach(element => count += element);
+    numbers.forEach(element => count += element)
     return count
   }
   console.log(sum([8, 2, 3, 1]))
@@ -39,10 +39,84 @@ function findAverage(array) {
     if(array.length === 0) {
         return 0
     } else {
-        array.forEach(x => sum += x);
+        array.forEach(x => sum += x)
     }
-    return sum / array.length;
+    return sum / array.length
 }
 console.log(findAverage([1, 1, 1]))
 
 // convert string to a number
+const stringToNumber = function(str) {
+    return str * 1
+}
+console.log(stringToNumber("134"))
+
+// keep hydrated
+const litres = function (time) {
+    return Math.floor(time * 0.5)
+}
+console.log(litres(3))
+
+// returning strings
+function greet(name) {
+    return `Hello, ${name} how are you doing today?`
+}
+console.log(greet("Max"))
+
+// century from year
+function century(year) {
+    return Math.ceil(year / 100)
+    }
+console.log(century(1701))
+
+// basic mathematical operations
+function basicOp(operation, value1, value2) {
+    switch (operation) {
+        case "+": return value1 + value2
+        case "-": return value1 - value2
+        case "*": return value1 * value2
+        case "/": return value1 / value2
+    }
+}
+console.log(basicOp("/", 89, 4))
+
+// convert boolean to string
+function booleanToString(b) {
+    return b.toString()
+}
+console.log(booleanToString(true))
+
+// double an integer
+function doubleInteger(i) {
+    return i * 2
+}
+console.log(doubleInteger(17))
+
+// abbreviate two word name
+function abbrevName(name) {
+    return name.split(" ").map(x => x[0].toUpperCase()).join(".")
+}
+console.log(abbrevName("Max Painov"))
+
+// string to upper case
+function makeUpperCase(str) {
+    return str.toUpperCase()
+}
+console.log(makeUpperCase("Here is Johnny!"))
+
+// opposites attract
+const lovefunc = function (flower1, flower2) {
+    return flower1 % 2 != flower2 % 2
+//     let res = false
+//     if (flower1 % 2 == 0) {
+//         if(flower2 % 2 != 0) {
+//             res = true
+//         }
+//     } else if (flower1 % 2 != 0) {
+//         if(flower2 % 2 == 0) {
+//             res =true
+//         }
+//     }
+//     return res
+}
+console.log(lovefunc(11, 9))
